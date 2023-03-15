@@ -24,7 +24,9 @@ app.post("/create-payment", async (req, res) => {
     res.json({ statusCode: 400, message: error });
   }
 });
-
+app.get("/", (req, res) => {
+  res.send("stripe server for payment with node and express");
+});
 app.get("/create-payment", (req, res) => {
   res.send("stripe server for payment with node and express");
 });
